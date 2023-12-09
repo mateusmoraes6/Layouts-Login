@@ -15,7 +15,9 @@ body {
 }
 
 img {
-    width: 800px;
+    max-width: 800px;
+    /* max-height: 500px; */
+    max-height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.397);
 }
@@ -95,8 +97,14 @@ button {
 }
 
 .image-container {
-    max-width: 100%;
+    width: auto;
+    height: auto;
 }
+
+.image-container img {
+    width: auto;
+    height: 100%;
+  }
 
 .form-container {
     height: 400px;
@@ -115,49 +123,51 @@ button:hover {
     background: linear-gradient(to bottom, rgba(8, 8, 153, 0.590), rgba(141, 31, 141, 0.590));
 }
 
-@media only screen and (max-width: 200px) {
-    img {
-        width: 100%;
-        height: 100%;
+/* Media query para dispositivos com largura de tela até 650px (celulares) */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+        height: 100vh;
     }
 
-    h1 {
-        font-size: 1.5em;
+    .image-container {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ajustar a largura da imagem para ocupar 100% do contêiner */
+        max-height: 100%;
     }
 
     .form-container {
-        width: 80%;
-        padding: 35px;
-        margin: 30% auto;
+        width: 70%; /* Ajustar a largura do form-container para aproveitar melhor o espaço em telas menores */
+        margin: 30% auto; /* Centralizar o form-container */
+    }
+
+    form {
+        padding: 15px; /* Adicionar algum espaço interno ao formulário para melhor legibilidade */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Ajustar o tamanho da fonte para telas menores */
+        text-align: center; /* Centralizar o texto */
+        margin-top: 10px; /* Adicionar um pouco de espaço superior para melhor estética */
+    }
+
+    button {
+        width: 100%; /* Fazer o botão ocupar 100% da largura do form-container */
     }
 
     .sign-up {
-        margin: auto;
-        left: 50px;
-        top: 50%;
-        transform: translate(-50%, 405%);
+        bottom: 10px; /* Ajustar a distância do fundo */
+        right: 10px; /* Ajustar a distância da direita */
+        font-size: 14px; /* Ajustar o tamanho da fonte se necessário */
     }
 }
-
-@media only screen and (max-width: 400px) {
-    header {
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    h1 {
-        max-width: 100px;
-        font-size: 16px;
-    }
-
-    input,
-    button {
-        font-size: 14px;
-    }
-
-    .form-container {
-        width: 90%;
-        padding: 10px;
-    }
-}
-
