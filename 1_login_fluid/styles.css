@@ -123,27 +123,27 @@ button:hover {
     background: linear-gradient(to bottom, rgba(8, 8, 153, 0.590), rgba(141, 31, 141, 0.590));
 }
 
-/* Media query para dispositivos com largura de tela até 650px (celulares) */
+/* Media query para dispositivos com largura de tela até 768px (celulares) */
 @media screen and (max-width: 768px) {
     body {
         width: 100vw;
-        height: 100vh;
+        height: 103vh;
     }
 
     .image-container {
+        position: absolute;
         width: 100vw;
         height: 100vh;
         text-align: center;
-        object-fit: contain;
-        position: absolute;
-        top: 50%;
+        top: 53%;
         left: 50%;
         transform: translate(-50%, -50%)
     }
 
     .image-container img {
-        max-width: 100%; /* Ajustar a largura da imagem para ocupar 100% do contêiner */
-        max-height: 100%;
+        width: 90%;
+        height: 95%;
+        object-fit: cover;
     }
 
     .form-container {
