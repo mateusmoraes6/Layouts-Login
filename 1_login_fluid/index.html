@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="img/fluid.jpg" alt="">
+        </div>
+
+        <div class="form-container">
+            <div>
+                <form id="meuFormulario">
+                    <header>
+                        <h1>Welcome</h1>
+                    </header>
+
+                    <label for="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Username">
+
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Password">
+
+                    <button type="button" onclick="enviarFormulario()">Sign in</button>
+
+                    <a class="link-password" href="#">Forgot password?</a>
+
+                    <a class="sign-up" href="#">Sign up ></a>
+                </form>
+
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
